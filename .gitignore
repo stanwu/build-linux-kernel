@@ -11,6 +11,6 @@
 .tmp_versions
 modules.order
 Module.symvers
-linux-*
+linux-*/
 .vscode
 
