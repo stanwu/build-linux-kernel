@@ -1,0 +1,5 @@
+{
+    "name": "Build kernel source code",
+    "postCreateCommand": "bash /workspaces/build-kernel-bkqpb6/.devcontainer/post-create.sh",
+    "postStartCommand": "bash /workspaces/build-kernel-bkqpb6/.devcontainer/post-start.sh"
+}
