@@ -1,0 +1,7 @@
+{
+    "git.ignoreLimitWarning": true,
+    "git.repositoryScanIgnoredFolders": [
+        "node_modules",
+        "linux-6.9.3"
+    ]
+}
