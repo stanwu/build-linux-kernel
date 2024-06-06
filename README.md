@@ -59,6 +59,7 @@ For more detailed information on ChromeOS LTS versions and their release cycles,
 
 - linux-6.9.3: test OK 
 - android-4.9: test OK
+- android13-5.15-2024-05_r2: test 
 - chromiumos-6.1.92: test OK
 - busybox-1.37.0.git: test OK 
 - toybox-0.8.11-44-g2c3363f742eb: test OK
@@ -72,6 +73,8 @@ android
 ```
 ./build-android-kernel.sh
 ```
+
+or use `git tag` to check all of exist android kernel version
 
 chromiumos
 ```
