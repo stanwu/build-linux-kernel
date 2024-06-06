@@ -49,7 +49,7 @@ The ChromeOS kernel versions used in Long-Term Support (LTS) releases are typica
 
 ChromeOS also employs a Long-Term Support Candidate (LTC) channel, which provides a preview of the next LTS version three months in advance, allowing administrators to test and prepare for upcoming updates.
 
-For more detailed information on ChromeOS LTS versions and their release cycles, you can refer to the official [ChromeOS.dev long-term support releases](https://chromeos.dev/en) and the [Chrome Releases blog](https://chromereleases.googleblog.com/)【33†source】【34†source】【35†source】【36†source】.
+For more detailed information on ChromeOS LTS versions and their release cycles, you can refer to the official [ChromeOS.dev long-term support releases](https://chromeos.dev/en) and the [Chrome Releases blog](https://chromereleases.googleblog.com/).
 
 - linux-6.9.3: test OK 
 - android-4.9: test OK
