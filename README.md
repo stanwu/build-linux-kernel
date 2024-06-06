@@ -2,6 +2,10 @@
 
 Ubuntu 20.04.6 LTS (GitHub Codespaces)
 
+## How to Build the Kernel from Source Code Quickly
+
+Fork this project and then open it with Codespaces. That's all.
+
 ## Linux Kernel
 
 The Linux Kernel Long-Term Support (LTS) versions are crucial for maintaining the stability and security of various systems over extended periods. Here is a list of the currently supported LTS versions and their projected end-of-life (EOL) dates:
