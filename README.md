@@ -39,7 +39,7 @@ These kernels receive regular updates and backports of important fixes and secur
 - **Security and Stability**: Regular updates ensure that these kernels include the latest security patches and stability improvements.
 - **Compatibility**: These kernels are designed to be compatible with various Android platform releases, allowing for device updates and long-term support.
 
-For more detailed and up-to-date information about Android LTS kernels, you can refer to the [Android Kernel Overview](https://source.android.com/docs/core/architecture/kernel/kernel-overview) and the [Stable Kernel Releases](https://source.android.com/docs/core/architecture/kernel/kernel-stable-releases) pages on the Android Open Source Project (AOSP) website.
+For more detailed and up-to-date information about Android LTS kernels, you can refer to the [Android Kernel Overview](https://source.android.com/docs/core/architecture/kernel/kernel-overview)on the Android Open Source Project (AOSP) website.
 
 ## ChromeOS and ChromiumOS Kernel
 
