@@ -6,11 +6,11 @@ Ubuntu 20.04.6 LTS (GitHub Codespaces)
 
 The Linux Kernel Long-Term Support (LTS) versions are crucial for maintaining the stability and security of various systems over extended periods. Here is a list of the currently supported LTS versions and their projected end-of-life (EOL) dates:
 
-1. **Linux 6.1.x** - Supported until December 2026
-2. **Linux 5.15.x** - Supported until December 2026
-3. **Linux 5.10.x** - Supported until December 2026
-4. **Linux 5.4.x** - Supported until December 2025
-5. **Linux 4.19.x** - Supported until December 2024
+1. **Linux 6.1** - Supported until December 2026
+2. **Linux 5.15** - Supported until December 2026
+3. **Linux 5.10** - Supported until December 2026
+4. **Linux 5.4** - Supported until December 2025
+5. **Linux 4.19** - Supported until December 2024
 
 Additionally, there are Super-Long-Term Support (SLTS) kernels, which extend support even further. The Linux 6.1 kernel, for instance, will enjoy support until August 2033 under the SLTS program.
 
@@ -20,13 +20,13 @@ For more details on the specific kernels and their updates, you can visit the [L
 
 The Android kernel Long-Term Supported (LTS) versions are maintained for an extended period to ensure stability, security, and long-term support for Android devices. These LTS kernels are derived from the upstream Linux LTS kernels with additional patches and modifications specific to Android. Here are the key Android LTS kernel versions:
 
-1. **5.15.x**
-2. **5.10.x**
-3. **5.4.x**
-4. **4.19.x**
-5. **4.14.x**
-6. **4.9.x**
-7. **4.4.x**
+1. **5.15**
+2. **5.10**
+3. **5.4**
+4. **4.19**
+5. **4.14**
+6. **4.9**
+7. **4.4**
 
 These kernels receive regular updates and backports of important fixes and security patches. Each of these LTS versions is supported for several years, ensuring that Android devices using these kernels remain secure and stable over time.
 
@@ -50,6 +50,8 @@ The ChromeOS kernel versions used in Long-Term Support (LTS) releases are typica
 ChromeOS also employs a Long-Term Support Candidate (LTC) channel, which provides a preview of the next LTS version three months in advance, allowing administrators to test and prepare for upcoming updates.
 
 For more detailed information on ChromeOS LTS versions and their release cycles, you can refer to the official [ChromeOS.dev long-term support releases](https://chromeos.dev/en) and the [Chrome Releases blog](https://chromereleases.googleblog.com/).
+
+## Build Log:
 
 - linux-6.9.3: test OK 
 - android-4.9: test OK
