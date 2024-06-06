@@ -1,6 +1,10 @@
 #!/bin/bash
 
-default="6.9.3"
+if [ -z "$1"]; then
+    default="6.9.3"
+else
+    default="$1"
+fi    
 
 echo "Downloading kernel source"
 [ ! -f linux-${default}.tar.xz ] && wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${default}.tar.xz
