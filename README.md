@@ -20,13 +20,13 @@ For more details on the specific kernels and their updates, you can visit the [L
 
 The Android kernel Long-Term Supported (LTS) versions are maintained for an extended period to ensure stability, security, and long-term support for Android devices. These LTS kernels are derived from the upstream Linux LTS kernels with additional patches and modifications specific to Android. Here are the key Android LTS kernel versions:
 
-1. **5.15**
-2. **5.10**
-3. **5.4**
-4. **4.19**
-5. **4.14**
-6. **4.9**
-7. **4.4**
+1. **Android 5.15**
+2. **Android 5.10**
+3. **Android 5.4**
+4. **Android 4.19**
+5. **Android 4.14**
+6. **Android 4.9**
+7. **Android 4.4**
 
 These kernels receive regular updates and backports of important fixes and security patches. Each of these LTS versions is supported for several years, ensuring that Android devices using these kernels remain secure and stable over time.
 
