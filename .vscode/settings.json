@@ -4,6 +4,8 @@
         "node_modules",
         "linux-6.9.3",
         "common",
-        "kernel"
+        "kernel",
+        "busybox",
+        "toybox"
     ]
 }
