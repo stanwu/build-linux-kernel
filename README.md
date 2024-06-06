@@ -4,6 +4,7 @@ Ubuntu 20.04.6 LTS (GitHub Codespaces)
 
 - linux-6.9.3: test OK 
 - android-4.9: test OK
+- chromiumos-6.1.92: test OK
 
 linux
 ```
@@ -15,5 +16,7 @@ android
 ./build-android-kernel.sh
 ```
 
-
-
+chromiumos
+```
+./build-chromiumos-kernel.sh
+```
