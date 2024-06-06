@@ -2,6 +2,55 @@
 
 Ubuntu 20.04.6 LTS (GitHub Codespaces)
 
+## Linux Kernel
+
+The Linux Kernel Long-Term Support (LTS) versions are crucial for maintaining the stability and security of various systems over extended periods. Here is a list of the currently supported LTS versions and their projected end-of-life (EOL) dates:
+
+1. **Linux 6.1.x** - Supported until December 2026
+2. **Linux 5.15.x** - Supported until December 2026
+3. **Linux 5.10.x** - Supported until December 2026
+4. **Linux 5.4.x** - Supported until December 2025
+5. **Linux 4.19.x** - Supported until December 2024
+
+Additionally, there are Super-Long-Term Support (SLTS) kernels, which extend support even further. The Linux 6.1 kernel, for instance, will enjoy support until August 2033 under the SLTS program.
+
+For more details on the specific kernels and their updates, you can visit the [Linux Kernel Archives](https://www.kernel.org/category/releases.html).
+
+## Android Kernel
+
+The Android kernel Long-Term Supported (LTS) versions are maintained for an extended period to ensure stability, security, and long-term support for Android devices. These LTS kernels are derived from the upstream Linux LTS kernels with additional patches and modifications specific to Android. Here are the key Android LTS kernel versions:
+
+1. **5.15.x**
+2. **5.10.x**
+3. **5.4.x**
+4. **4.19.x**
+5. **4.14.x**
+6. **4.9.x**
+7. **4.4.x**
+
+These kernels receive regular updates and backports of important fixes and security patches. Each of these LTS versions is supported for several years, ensuring that Android devices using these kernels remain secure and stable over time.
+
+### Key Points about Android LTS Kernels:
+- **Extended Support**: LTS kernels are maintained for a minimum of 2 years, often extending beyond that depending on community and vendor support.
+- **Security and Stability**: Regular updates ensure that these kernels include the latest security patches and stability improvements.
+- **Compatibility**: These kernels are designed to be compatible with various Android platform releases, allowing for device updates and long-term support.
+
+For more detailed and up-to-date information about Android LTS kernels, you can refer to the [Android Kernel Overview](https://source.android.com/docs/core/architecture/kernel/kernel-overview) and the [Stable Kernel Releases](https://source.android.com/docs/core/architecture/kernel/kernel-stable-releases) pages on the Android Open Source Project (AOSP) website.
+
+## ChromeOS and ChromiumOS Kernel
+
+The ChromeOS kernel versions used in Long-Term Support (LTS) releases are typically aligned with the Linux LTS kernels. As of the latest updates, the ChromeOS LTS channels provide more stable updates every six months to ensure security and feature stability. Here’s a summary of the current ChromeOS LTS versions and their corresponding Linux kernel versions:
+
+1. **ChromeOS LTS 114** - This release is based on the Linux 5.10 LTS kernel. It is designed to offer stability and long-term support with updates focusing on security and critical bug fixes.
+
+2. **ChromeOS LTS 102** - Previously based on the Linux 4.19 LTS kernel. This version ensures stability for devices that require extended support and less frequent updates.
+
+3. **ChromeOS LTS 96** - Prior versions included older kernels like Linux 4.4 and 4.9, offering a solid foundation for earlier ChromeOS devices with extended support.
+
+ChromeOS also employs a Long-Term Support Candidate (LTC) channel, which provides a preview of the next LTS version three months in advance, allowing administrators to test and prepare for upcoming updates.
+
+For more detailed information on ChromeOS LTS versions and their release cycles, you can refer to the official [ChromeOS.dev long-term support releases](https://chromeos.dev/en) and the [Chrome Releases blog](https://chromereleases.googleblog.com/)【33†source】【34†source】【35†source】【36†source】.
+
 - linux-6.9.3: test OK 
 - android-4.9: test OK
 - chromiumos-6.1.92: test OK
