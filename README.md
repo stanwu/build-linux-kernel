@@ -58,6 +58,7 @@ For more detailed information on ChromeOS LTS versions and their release cycles,
 ## Build Log:
 
 - linux-6.9.3: test OK
+- linux-6.1.92: test 
 - android14-6.1-2024-05_r5: test OK
 - android13-5.15-2024-05_r2: test OK
 - android-4.9: test OK

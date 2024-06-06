@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1"]; then
-    default="6.9.3"
+    default="6.1.92"
 else
     default="$1"
 fi    
@@ -15,3 +15,4 @@ echo "Make kernel"
 cd linux-${default}/
 cp ../.config .
 make
+
