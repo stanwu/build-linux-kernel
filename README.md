@@ -1,4 +1,8 @@
-# build-kernel-bkqpb6
+# Build Linux Kernel
+
+
+- 2024/10.09 Review
+- 2024/01/01 Init.
 
 Ubuntu 20.04.6 LTS (GitHub Codespaces)
 
@@ -16,7 +20,7 @@ The Linux Kernel Long-Term Support (LTS) versions are crucial for maintaining th
 4. **Linux 5.4** - Supported until December 2025
 5. **Linux 4.19** - Supported until December 2024
 
-Additionally, there are Super-Long-Term Support (SLTS) kernels, which extend support even further. The Linux 6.1 kernel, for instance, will enjoy support until August 2033 under the SLTS program.
+Additionally, there are **Super-Long-Term Support** (SLTS) kernels, which extend support even further. The Linux 6.1 kernel, for instance, will enjoy support until August 2033 under the SLTS program.
 
 For more details on the specific kernels and their updates, you can visit the [Linux Kernel Archives](https://www.kernel.org/category/releases.html).
 
