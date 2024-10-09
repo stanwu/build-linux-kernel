@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check Ubuntu version
+if [[ $(lsb_release -rs) != "20.04" ]]; then
+    echo "This script is designed for Ubuntu 20.04."
+    exit 1
+fi
+
 # Update package manager and install necessary packages
 sudo apt update
 sudo apt install -y git build-essential libncurses-dev bison flex libssl-dev bc

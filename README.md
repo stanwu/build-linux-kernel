@@ -1,7 +1,7 @@
 # Build Linux Kernel
 
 
-- 2024/10.09 Review
+- 2024/10/09 Review
 - 2024/01/01 Init.
 
 Ubuntu 20.04.6 LTS (GitHub Codespaces)
