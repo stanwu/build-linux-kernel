@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get install -y build-essential libncurses5-dev bison flex git
 
 echo "Cloning BusyBox repository..."
-[ ! -f busybox/Makefile ] && git clone git://busybox.net/busybox.git
+[ ! -f busybox/Makefile ] && git clone --depth 1 git://busybox.net/busybox.git
 cd busybox || { echo "Failed to change directory to busybox"; exit 1; }
 
 echo "Configuring build with default configuration..."

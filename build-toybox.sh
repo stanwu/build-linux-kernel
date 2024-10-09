@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get install -y build-essential git
 
 echo "Cloning Toybox repository..."
-[ ! -f toybox/Makefile ] && git clone https://github.com/landley/toybox.git
+[ ! -f toybox/Makefile ] && git clone --depth 1 https://github.com/landley/toybox.git
 cd toybox || { echo "Failed to change directory to toybox"; exit 1; }
 
 echo "Configuring build with default configuration..."

@@ -11,7 +11,7 @@ sudo apt update
 sudo apt install -y git build-essential libncurses-dev bison flex libssl-dev bc
 
 # Clone the ChromeOS kernel source code from the repository
-[ ! -f kernel/Makefile ] && git clone https://chromium.googlesource.com/chromiumos/third_party/kernel
+[ ! -f kernel/Makefile ] && git clone --depth 1 https://chromium.googlesource.com/chromiumos/third_party/kernel
 cd kernel
 
 echo "Copy the base configuration file and run oldconfig to update it"
