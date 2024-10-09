@@ -11,7 +11,7 @@ sudo apt update -y
 sudo apt install -y build-essential libncurses-dev bison flex libssl-dev bc git
 
 # Download the Android 12 kernel 5.10 source code
-[ ! -d android-12-5.10 ] && git clone --depth 1 --branch android12-5.10 https://android.googlesource.com/kernel/common.git
+[ ! -d common ] && git clone --depth 1 --branch android12-5.10 https://android.googlesource.com/kernel/common.git
 
 echo "Make Android's latest kernel"
 cd common
