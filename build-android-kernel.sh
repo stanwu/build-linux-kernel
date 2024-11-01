@@ -6,6 +6,20 @@ if [[ $(lsb_release -rs) != "20.04" ]]; then
     exit 1
 fi
 
+# Check if a branch name is provided as an argument
+if [ -z "$1" ]; then
+    git ls-remote --heads https://android.googlesource.com/kernel/common.git | grep android | awk -F/ '{print $3}'
+    echo "Please give a branch to build, for example android12-5.10"
+    exit 1
+else
+    branch=$1
+    # Check branch should be start with android
+    if [[ $branch != "android"* ]]; then
+        echo "Branch name should start with android"
+        exit 1
+    fi
+fi
+
 # Update package manager and install required packages
 sudo apt update -y
 sudo apt install -y build-essential libncurses-dev bison flex libssl-dev bc git
