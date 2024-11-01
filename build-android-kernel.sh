@@ -8,7 +8,7 @@ fi
 
 # Check if a branch name is provided as an argument
 if [ -z "$1" ]; then
-    git ls-remote --heads https://android.googlesource.com/kernel/common.git | grep android | awk -F/ '{print $3}'
+    git ls-remote --heads https://android.googlesource.com/kernel/common.git | awk -F/ '{print $3}' | grep -i ^android
     echo "Please give a branch to build, for example android12-5.10"
     exit 1
 else
