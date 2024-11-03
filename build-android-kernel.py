@@ -7,29 +7,29 @@ import sys
 import json
 from datetime import datetime
 
-# 設定資料庫檔案名稱
+# Set the database file name
 database_file = "build_results.json"
 
-# 初始化資料庫
+# Initialize the database
 if not os.path.exists(database_file):
     with open(database_file, "w") as f:
         json.dump([], f)
 
-# 讀取已編譯的 branch 結果
+# Load the build results from the database
 def load_database():
     with open(database_file, "r") as f:
         return json.load(f)
 
-# 更新資料庫
+# Update the database
 def update_database(data):
     with open(database_file, "w") as f:
         json.dump(data, f, indent=4)
 
-# 檢查是否已經編譯過該 branch
+# Check if the branch has already been built
 def is_branch_built(database, branch_name):
     return any(entry["branch_name"] == branch_name for entry in database)
 
-# 檢查 Ubuntu 版本
+# Check the Ubuntu version
 def check_ubuntu_version():
     try:
         result = subprocess.run(["lsb_release", "-rs"], capture_output=True, text=True, check=True)
@@ -40,14 +40,14 @@ def check_ubuntu_version():
         print("Unable to determine Ubuntu version.")
         sys.exit(1)
 
-# 列出可用 branch
+# List available branches
 def get_available_branches():
     branches = subprocess.run(
         ["git", "ls-remote", "--heads", "https://android.googlesource.com/kernel/common.git"],
         capture_output=True, text=True
     )
 
-    # We need exclud deprecated branches
+    # Exclude deprecated branches
     deprecated_keywords = ["deprecated", "old", "legacy"]
     branch_names = [
         line.split("/")[-1] for line in branches.stdout.splitlines()
@@ -56,20 +56,20 @@ def get_available_branches():
     branch_names.sort()
     return branch_names
 
-# 驗證 branch 名稱
+# Validate branch name
 def validate_branch_name(branch):
     if not branch.startswith("android"):
         print("Branch name should start with android")
         sys.exit(1)
 
-# 安裝必要套件
+# Install required packages
 def install_required_packages():
     subprocess.run(["sudo", "apt", "update", "-y"], check=True)
     subprocess.run([
         "sudo", "apt", "install", "-y", "build-essential", "libncurses-dev", "bison", "flex", "libssl-dev", "bc", "git"
     ], check=True)
 
-# 克隆指定的 branch
+# Clone the specified branch
 def clone_repository(branch):
     if not os.path.isdir("common"):
         subprocess.run(
@@ -77,7 +77,7 @@ def clone_repository(branch):
             check=True
         )
 
-# 編譯 kernel
+# Build the kernel
 def build_kernel():
     os.chdir("common")
     try:
@@ -89,7 +89,7 @@ def build_kernel():
     finally:
         os.chdir("..")
 
-# 取得編譯環境資訊
+# Get build environment information
 def get_build_environment():
     environment = {
         "os": platform.system(),
@@ -99,15 +99,15 @@ def get_build_environment():
     }
     return environment
 
-# 主程式
+# Main function
 def main():
-    # 載入資料庫
+    # Load the database
     database = load_database()
 
-    # 檢查 Ubuntu 版本
+    # Check the Ubuntu version
     check_ubuntu_version()
 
-    # 檢查是否提供了 branch 名稱
+    # Check if a branch name is provided
     if len(sys.argv) < 2:
         available_branches = get_available_branches()
         print("Available branches:")
@@ -118,29 +118,29 @@ def main():
     
     branch = sys.argv[1]
     
-    # 驗證 branch 名稱
+    # Validate branch name
     validate_branch_name(branch)
     
-    # 檢查是否已經編譯過
+    # Check if the branch has already been built
     if is_branch_built(database, branch):
-        print(f"Branch {branch} 已編譯過，跳過")
+        print(f"Branch {branch} has already been built, skipping")
         sys.exit(0)
 
-    # 安裝必要的套件
+    # Install required packages
     install_required_packages()
     
-    # 克隆儲存庫
+    # Clone the repository
     clone_repository(branch)
     
-    # 編譯 kernel 並儲存結果
-    print(f"正在編譯 branch {branch}...")
+    # Build the kernel and save the result
+    print(f"Building branch {branch}...")
     build_status = build_kernel()
     build_date = datetime.now().isoformat()
 
-    # 獲取編譯環境資訊
+    # Get build environment information
     build_environment = get_build_environment()
 
-    # 新增編譯結果到資料庫
+    # Add the build result to the database
     entry = {
         "branch_name": branch,
         "build_date": build_date,
@@ -150,7 +150,7 @@ def main():
     database.append(entry)
     update_database(database)
 
-    print(f"Branch {branch} 編譯 {build_status}")
+    print(f"Branch {branch} build {build_status}")
 
 if __name__ == "__main__":
     main()
