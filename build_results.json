@@ -20,5 +20,16 @@
             "architecture": "x86_64",
             "cpu_cores": 2
         }
+    },
+    {
+        "branch_name": "android16-6.12-desktop",
+        "build_date": "2024-11-03T05:19:39.446846",
+        "build_status": "success",
+        "build_environment": {
+            "os": "Linux",
+            "os_version": "6.5.0-1025-azure",
+            "architecture": "x86_64",
+            "cpu_cores": 2
+        }
     }
 ]
